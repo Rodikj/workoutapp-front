@@ -9,22 +9,23 @@ interface Exercise {
 
 const ExercisePage: React.FC = () => {
   const [exercises, setExercises] = useState<Exercise[]>([]);
-  const [bodyPart, setBodyPart] = useState("full body");
-  const [equipment, setEquipment] = useState("bodyweight");
+  const [muscle, setBodyPart] = useState("arm");
+  const [equipment, setEquipment] = useState("dumbells");
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchExercises = async () => {
       try {
-        const fetchedExercises = await ExerciseRepository.getExercises(bodyPart, equipment, page);
+        const fetchedExercises = await ExerciseRepository.getExercises(muscle, equipment, page);
         setExercises(fetchedExercises);
       } catch (error) {
         console.error("Error fetching exercises:", error);
       }
     };
 
-    fetchExercises();
-  }, [bodyPart, equipment, page]);
+    console.log("-------------------------------")
+    console.log(fetchExercises());
+  }, [muscle, equipment, page]);
 
   return (
     <div>
@@ -34,7 +35,11 @@ const ExercisePage: React.FC = () => {
           exercises.map((exercise, index) => (
             <div key={index} style={{ border: "1px solid #ccc", padding: "10px", marginBottom: "10px" }}>
               <h3>{exercise.name}</h3>
-              <p>{exercise.description}</p>
+              <p>
+                {
+                  exercise.description.replace(/<\/?[^>]+(>|$)/g, "")
+                }
+              </p>
               <div>
                 {exercise.pictures.map((pic, idx) => (
                   <img key={idx} src={pic} alt={exercise.name} style={{ width: "150px", height: "150px", marginRight: "10px" }} />

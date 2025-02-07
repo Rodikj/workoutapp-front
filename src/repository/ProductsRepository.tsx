@@ -10,7 +10,8 @@ interface Product {
 
 const ProductsRepository = {
   getProductsByCategory: async (category: string, page: string): Promise<Product[]> => {
-    const response = await axios.get<Product[]>(`/products/${category}/${page}`, {
+    const response = await axios.get<Product[]>(`/products/get`, {
+      params: {category, page},
       headers: { Authorization: `Bearer ${token}` },
     });
     return response.data;

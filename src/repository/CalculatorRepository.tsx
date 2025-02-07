@@ -2,15 +2,6 @@ import axios from "../axios/axios";
 
 const token = localStorage.getItem("authToken");
 
-interface CalculatorStats {
-    bmi: string;
-    bmr: string;
-    idealBodyWeight: string;
-    bodyFatPercentage: string;
-    targetHeartRate: string;
-    leanBodyMass: string;
-}
-
 const CalculatorRepository = {
     getBMI: async (userId: string): Promise<string> => {
         const response = await axios.get<string>(`/calculator/calculateBMI?userId=${userId}`, {

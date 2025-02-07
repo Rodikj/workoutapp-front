@@ -9,9 +9,9 @@ interface Exercise {
 }
 
 const ExerciseRepository = {
-  getExercises: async (bodyPart: string, equipment: string, page: number): Promise<Exercise[]> => {
-    const response = await axios.get<Exercise[]>(`/exercises`, {
-      params: { bodyPart, equipment, page },
+  getExercises: async (muscle: string, equipment: string, page: number): Promise<Exercise[]> => {
+    const response = await axios.get<Exercise[]>(`/exercises/get`, {
+      params: { muscle, equipment, page },
       headers: { Authorization: `Bearer ${token}` },
     });
     return response.data;

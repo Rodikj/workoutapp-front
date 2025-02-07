@@ -1,13 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../styles/HomePage.css';
 import MenuItem from '../components/MenuItem';
 import ExerciseImage from '../assets/exerciseImage.jpg';
 import ShopImage from '../assets/shopImage.jpg';
 import CalculatorImage from '../assets/calculatorImage.jpg';
 import NavigationBar from '../components/NavigationBar';
+import MarkerRepository from "../repository/MarkerRepository.tsx";
 
 const HomePage: React.FC = () => {
   document.body.className = 'home-body';
+
+  useEffect(()=>{
+    console.log("----------------------------------")
+    console.log(MarkerRepository.fetchMarkers())
+  })
+
   return (
     <div className='nav-container'>
       <NavigationBar />

@@ -9,7 +9,7 @@ interface Product {
 
 const ProductsPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [category, setCategory] = useState("default");
+  const [category, setCategory] = useState("protein-shakes");
   const [page, setPage] = useState("1");
 
   useEffect(() => {
@@ -22,7 +22,8 @@ const ProductsPage: React.FC = () => {
       }
     };
 
-    fetchProducts();
+    console.log("------------------------------------------")
+    console.log(fetchProducts());
   }, [category, page]);
 
   return (
