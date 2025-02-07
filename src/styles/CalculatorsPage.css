@@ -1,0 +1,83 @@
+.calculator-container {
+    text-align: center;
+    padding: 40px 10%;
+    font-family: "Poppins", sans-serif; 
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', serif;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+/* 2x3 Grid Layout */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.calculator-card {
+    background: white;
+    color: black;
+    border-radius: 25px;
+    padding: 40px 20px;
+    box-shadow: 0 10px 20px rgb(221, 220, 220);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    text-align: center;
+    font-size: 30px;
+}
+
+.calculator-card:nth-child(2) {
+    background: white;
+}
+
+.calculator-card:nth-child(3) {
+    background: white;
+}
+
+.calculator-card:nth-child(4) {
+    background: white;
+}
+
+.calculator-card:nth-child(5) {
+    background: white;
+}
+
+.calculator-card:nth-child(6) {
+    background: white;
+}
+
+.calculator-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-card h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.calculator-card p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .calculator-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}
