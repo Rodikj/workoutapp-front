@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const loadGoogleMaps = () => {
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCwF2gO7zE_BSnPKVaTdxrQuIIQsLFreCQ&callback=initMap`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=*****&callback=initMap`;
       script.async = true;
       document.head.appendChild(script);
     };
