@@ -10,7 +10,7 @@
   width: 100%;
   padding: 0 10px;
   content: "";
-  overflow: hidden;
+  overflow: hidden;  
 }
 
 .auth-wrapper {
@@ -31,7 +31,7 @@ form {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: white;
 }
 
 .input-field {
@@ -68,7 +68,7 @@ h2 {
   border: none;
   outline: none;
   font-size: 16px;
-  color: #fff;
+  color: white;
 }
 
 
@@ -136,7 +136,7 @@ button:hover {
 
 .input-field {
   position: relative;
-  margin: 15px 0;
+  margin: 12px 0;
   border-bottom: 2px solid #ccc;
 }
 

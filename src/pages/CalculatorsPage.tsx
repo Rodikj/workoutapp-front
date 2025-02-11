@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CalculatorRepository from "../repository/CalculatorRepository";
 import "../styles/CalculatorsPage.css";
 import NavigationBar from '../components/NavigationBar';
-import "../styles/LoadingAnimation.css";
+// import "../styles/LoadingAnimation.css";
 
 const userId = localStorage.getItem("userId") || "";
 
@@ -37,7 +37,7 @@ const CalculatorsPage: React.FC = () => {
 
                 setCalculations({ bmi, bmr, idealBodyWeight, bodyFatPercentage, targetHeartRate, leanBodyMass });
             } catch (err) {
-                setError("Failed to fetch calculations");
+                setError("Failed to fetch calculators");
             } finally {
                 setLoading(false);
             }
@@ -50,37 +50,40 @@ const CalculatorsPage: React.FC = () => {
     if (error) return <p style={{ color: "red" }}>{error}</p>;
 
     return (
-        <div className="calculator-container">
-        <NavigationBar />
-            <h2 className="page-title">Your health stats</h2>
-            <div className="calculator-grid">
-                <div className="calculator-card">
-                    <h3>BMI</h3>
-                    <p>{calculations.bmi}</p>
-                </div>
-                <div className="calculator-card">
-                    <h3>BMR</h3>
-                    <p>{calculations.bmr}</p>
-                </div>
-                <div className="calculator-card">
-                    <h3>Ideal Body Weight</h3>
-                    <p>{calculations.idealBodyWeight}</p>
-                </div>
-                <div className="calculator-card">
-                    <h3>Body Fat Percentage</h3>
-                    <p>{calculations.bodyFatPercentage}</p>
-                </div>
-                <div className="calculator-card">
-                    <h3>Target Heart Rate</h3>
-                    <p>{calculations.targetHeartRate}</p>
-                </div>
-                <div className="calculator-card">
-                    <h3>Lean Body Mass</h3>
-                    <p>{calculations.leanBodyMass}</p>
+        <div className="page-wrapper">
+            <NavigationBar />
+            <div className="calculator-container">
+                <h2 className="page-title">Your health stats</h2>
+                <div className="calculator-grid">
+                    <div className="calculator-card">
+                        <h3>BMI</h3>
+                        <p>{calculations.bmi}</p>
+                    </div>
+                    <div className="calculator-card">
+                        <h3>BMR</h3>
+                        <p>{calculations.bmr}</p>
+                    </div>
+                    <div className="calculator-card">
+                        <h3>Ideal Body Weight</h3>
+                        <p>{calculations.idealBodyWeight}</p>
+                    </div>
+                    <div className="calculator-card">
+                        <h3>Body Fat Percentage</h3>
+                        <p>{calculations.bodyFatPercentage}</p>
+                    </div>
+                    <div className="calculator-card">
+                        <h3>Target Heart Rate</h3>
+                        <p>{calculations.targetHeartRate}</p>
+                    </div>
+                    <div className="calculator-card">
+                        <h3>Lean Body Mass</h3>
+                        <p>{calculations.leanBodyMass}</p>
+                    </div>
                 </div>
             </div>
         </div>
     );
+    
 };
 
 export default CalculatorsPage;

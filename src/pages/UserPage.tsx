@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/UserPage.css';
 import NavigationBar from '../components/NavigationBar';
-import '../styles/LoadingAnimation.css';
 
 interface UserProfile {
   name: string;
@@ -42,31 +41,38 @@ const UserPage: React.FC = () => {
       <div className="user-profile-wrapper">
         <div className="user-profile-card">
           <h2>User Profile</h2>
+
           <div className="user-profile">
             <div className="profile-info">
               <label>Name:</label>
               <span>{user.name}</span>
             </div>
+
             <div className="profile-info">
               <label>Last Name:</label>
               <span>{user.lastName}</span>
             </div>
+
             <div className="profile-info">
               <label>Age:</label>
               <span>{user.age}</span>
             </div>
+
             <div className="profile-info">
               <label>Height (cm):</label>
               <span>{user.height}</span>
             </div>
+
             <div className="profile-info">
               <label>Weight (kg):</label>
               <span>{user.weight}</span>
             </div>
+
             <div className="profile-info">
               <label>Username:</label>
               <span>{user.userName}</span>
             </div>
+
             <div className="profile-info">
               <label>Gender:</label>
               <span>{user.gender}</span>

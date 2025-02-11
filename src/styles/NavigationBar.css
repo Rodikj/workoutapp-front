@@ -2,13 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa;
-    padding: 10px 20px;
+    background-color: white;
+    padding: 1vw 4.5vw;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    width: 90%;
+    position: fixed;
+    border-radius: 20px;
 }
 
 .navbar-left {
-    font-size: 18px;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', sans-serif;
     font-weight: bold;
     color: #333;
 }

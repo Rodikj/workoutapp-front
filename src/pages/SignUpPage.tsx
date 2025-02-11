@@ -60,19 +60,21 @@ const SignUpPage: React.FC = () => {
               console.log('User registered successfully:', response.data);
               navigate('/login');
           } else {
-              setError('Failed to register user. Please try again.');
+              setError('Failed to register user!');
           }
       } catch (err) {
-          console.error('Error during registration:', err);
-          setError('An error occurred. Please check your input or try again later.');
+          console.error('Registration error:', err);
+          setError('Invalid input');
       }
   };
 
   return (
     <div className="auth-wrapper">
         <form action="#" onSubmit={handleSubmit}>
+
             <h2>Sign Up</h2>
             {error && <p className="error-message">{error}</p>}
+
             <div className="input-field">
                 <input
                     type="text"
@@ -83,6 +85,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>First Name</label>
             </div>
+
             <div className="input-field">
                 <input
                     type="text"
@@ -93,6 +96,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>Last Name</label>
             </div>
+
             <div className="input-field">
                 <input
                     type="number"
@@ -103,6 +107,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>Age</label>
             </div>
+
             <div className="input-field">
                 <input
                     type="number"
@@ -113,6 +118,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>Height (cm)</label>
             </div>
+
             <div className="input-field">
                 <input
                     type="number"
@@ -123,6 +129,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>Weight (kg)</label>
             </div>
+
             <div className="input-field">
                 <input
                     type="text"
@@ -133,6 +140,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>Username</label>
             </div>
+
             <div className="input-field">
                 <input
                     type="text"
@@ -143,6 +151,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>Email</label>
             </div>
+
             <div className="input-field">
                 <input
                     type="password"
@@ -153,6 +162,7 @@ const SignUpPage: React.FC = () => {
                 />
                 <label>Password</label>
             </div>
+
             <div className="input-field no-line">
                 <select
                     name="gender"
@@ -167,7 +177,9 @@ const SignUpPage: React.FC = () => {
                     <option value="female">Female</option>
                 </select>
             </div>
+
             <button type="submit">Sign Up</button>
+
             <div className="register">
                 <p>
                     Already have an account? <a href="/login">Log In</a>

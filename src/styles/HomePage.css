@@ -1,13 +1,16 @@
 .homepage-container {
   display: flex;
   overflow: hidden;
-}
 
+
+  height: calc(100vh - 60px);
+}
 .map-container {
   flex: 1;
-  height: 820px;
-  padding-top: 20px;
-  padding-left: 20px;
+  height: 100%;
+  margin-top: 13vh;
+  margin-left: 1vh;
+  /* padding-top: 1%; */
 }
 
 .google-map {
@@ -15,26 +18,29 @@
   height: 100%;
 }
 
+
 .menu-container {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: white;
+  height: 100%;
+  padding-top: 13vh;
+  gap:4.2vh
 }
 
 .menu-container > * {
-  width: 850px;
-  /* pojse od 249px i ke ima overflow -> podesi height na mapa */
-  height: 249px; 
-  margin: 20px;
+  width: 90%;
+  height: 22.4vh;
+  /* margin-top: 10vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
   border-radius: 8px;
@@ -45,9 +51,11 @@
 .menu-container > *:hover {
   transform: scale(1.05);
   background-color: white;
+  color: black;
 }
 
 .menu-item {
   background-size: cover;
   background-position: center;
-} 
+  padding: 0.5rem;
+}

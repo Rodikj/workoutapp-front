@@ -73,6 +73,7 @@ const NavigationBar: React.FC = () => {
           <a href="/home" className="navbar-message-link">{message}</a>
         </span>
       </div>
+      
       <div className="navbar-right">
         <a href="/userPage">
           <img

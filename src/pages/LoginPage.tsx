@@ -62,6 +62,7 @@ const LoginPage: React.FC = () => {
       <div className="auth-wrapper">
       <form action="#" onSubmit={handleSubmit}>
         <h2>Login</h2>
+
           <div className="input-field">
           <input 
             type="text" 
@@ -70,8 +71,9 @@ const LoginPage: React.FC = () => {
             onChange={handleChange}
             required 
           />
-          <label>Enter your username</label>
+          <label>Enter your email</label>
         </div>
+
         <div className="input-field">
           <input 
             type="password" 
@@ -82,10 +84,13 @@ const LoginPage: React.FC = () => {
           />
           <label>Enter your password</label>
         </div>
+
         <button type="submit">Log In</button>
+
         <div className="register">
           <p>Don't have an account? <a href="/register">Register</a></p>
         </div>
+
       </form>
     </div>
     );
