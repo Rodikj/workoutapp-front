@@ -1,5 +1,5 @@
 <h1>Welcome to the Workout Application! </h1>
-This app helps users improve their fitness by providing a curated list of exercises, nutritional products, and health calculators. <br> <br>
+This app helps users improve their fitness by providing a curated list of exercises, nutritional products, and health calculators. The app has a separate frontend repository and a separate backend repository, technologies used: React with Typescript, HTML5, CSS for frontend, Java with Spring for backend, PostgreSQL for database and a variety of API calls!  <br> <br>
 
 🏋️ Exercises Page <br>
 The Exercises page showcases a variety of workouts based on the muscle we want to work out and the equipment we have!
